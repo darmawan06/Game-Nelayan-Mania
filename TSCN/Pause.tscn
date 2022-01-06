@@ -1,0 +1,78 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Script/ToShop.gd" type="Script" id=1]
+[ext_resource path="res://Script/PauseStart.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.219608, 0.521569, 0.741176, 0.74902 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.858824, 0.839216, 0.839216, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0745098, 0.180392, 0.364706, 1 )
+
+[node name="Pause" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -64.0
+margin_top = -64.0
+margin_right = 64.0
+margin_bottom = 64.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Start" type="Button" parent="Panel"]
+margin_left = 32.0
+margin_top = 48.0
+margin_right = 96.0
+margin_bottom = 68.0
+rect_pivot_offset = Vector2( 32, 16 )
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/normal = SubResource( 2 )
+text = "START"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="Panel"]
+margin_left = 32.0
+margin_top = 80.0
+margin_right = 96.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 32, 16 )
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_styles/normal = SubResource( 2 )
+text = "EXIT"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+linkPath = "res://TSCN/Menu Home.tscn"
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 24.0
+margin_top = 24.0
+margin_right = 107.0
+margin_bottom = 38.0
+text = "PAUSE GAME"
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 8.0
+margin_top = 112.0
+margin_right = 321.0
+margin_bottom = 143.0
+rect_scale = Vector2( 0.369211, 0.372362 )
+custom_colors/font_color = Color( 0.929412, 0.929412, 0.929412, 1 )
+custom_colors/font_color_shadow = Color( 0.313726, 0.313726, 0.313726, 1 )
+text = "note : exit game tidak akan mendapatkan reward,
+Reward di bagikan ketika ikan sudah habis"

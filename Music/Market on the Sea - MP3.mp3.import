@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Market on the Sea - MP3.mp3-f108852686841040cd5ea51e3dec2b94.mp3str"
+
+[deps]
+
+source_file="res://Music/Market on the Sea - MP3.mp3"
+dest_files=[ "res://.import/Market on the Sea - MP3.mp3-f108852686841040cd5ea51e3dec2b94.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

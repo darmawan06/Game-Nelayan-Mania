@@ -1,0 +1,128 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://icons8-shop-64.png" type="Texture" id=1]
+[ext_resource path="res://exit.png" type="Texture" id=2]
+[ext_resource path="res://setting.png" type="Texture" id=3]
+[ext_resource path="res://start.png" type="Texture" id=4]
+[ext_resource path="res://Script/Menu Home.gd" type="Script" id=5]
+[ext_resource path="res://Script/Start.gd" type="Script" id=6]
+[ext_resource path="res://Script/ToShop.gd" type="Script" id=7]
+[ext_resource path="res://Script/ExitGame.gd" type="Script" id=8]
+[ext_resource path="res://Music/Komiku_-_12_-_Pirates_libertaires.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Script/AudioStreamPlayer.gd" type="Script" id=10]
+
+[node name="Menu Home" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+
+[node name="Panel" type="Panel" parent="Camera2D"]
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Camera2D"]
+margin_right = 1024.0
+margin_bottom = 312.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+margin_top = 280.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.0470588, 0.639216, 0.737255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Setting" type="Button" parent="Camera2D"]
+margin_left = 152.0
+margin_top = 416.0
+margin_right = 1065.0
+margin_bottom = 641.0
+rect_scale = Vector2( 0.343994, 0.322218 )
+shortcut_in_tooltip = false
+icon = ExtResource( 3 )
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+linkPath = "res://TSCN/Setting.tscn"
+
+[node name="Start" type="Button" parent="Camera2D"]
+margin_left = 360.0
+margin_top = 264.0
+margin_right = 1273.0
+margin_bottom = 489.0
+rect_scale = Vector2( 0.343994, 0.322218 )
+shortcut_in_tooltip = false
+action_mode = 0
+icon = ExtResource( 4 )
+flat = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="Camera2D"]
+margin_left = 592.0
+margin_top = 416.0
+margin_right = 1505.0
+margin_bottom = 641.0
+rect_scale = Vector2( 0.343994, 0.322218 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Camera2D"]
+margin_left = 184.0
+margin_top = 72.0
+margin_right = 292.0
+margin_bottom = 96.0
+rect_scale = Vector2( 6.21125, 5.86313 )
+custom_colors/font_color = Color( 0.754934, 0.863281, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.796078, 0.0705882, 0.835294, 1 )
+text = "NELAYAN MANIA"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToShop" type="Button" parent="Camera2D"]
+margin_left = 32.0
+margin_top = 512.0
+margin_right = 112.0
+margin_bottom = 582.0
+toggle_mode = true
+icon = ExtResource( 1 )
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+linkPath = "res://TSCN/Menu Shop Perahu.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 2.622
+autoplay = true
+mix_target = 1
+bus = "New Bus"
+script = ExtResource( 10 )

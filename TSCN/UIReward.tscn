@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Script/RewardUI.gd" type="Script" id=1]
+[ext_resource path="res://Script/ToShop.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0196078, 0.396078, 0.278431, 0.92549 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.0352941, 0.392157, 0.552941, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 8.0
+margin_right = -376.0
+margin_bottom = -80.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="ColorRect" parent="."]
+margin_right = 648.0
+margin_bottom = 512.0
+color = Color( 0.0196078, 0.278431, 0.643137, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 248.0
+margin_top = 48.0
+margin_right = 307.0
+margin_bottom = 64.0
+rect_scale = Vector2( 2.85518, 2.78917 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.247059, 0.239216, 0.239216, 1 )
+text = "REWARD"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelGold" type="Label" parent="Panel"]
+margin_left = 136.0
+margin_top = 192.0
+margin_right = 178.0
+margin_bottom = 206.0
+rect_scale = Vector2( 2.10652, 2.78699 )
+text = "Gold : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelKG" type="Label" parent="Panel"]
+margin_left = 136.0
+margin_top = 256.0
+margin_right = 178.0
+margin_bottom = 270.0
+rect_scale = Vector2( 2.10652, 2.78699 )
+text = "Ikan : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelExp" type="Label" parent="Panel"]
+margin_left = 136.0
+margin_top = 320.0
+margin_right = 176.0
+margin_bottom = 334.0
+rect_scale = Vector2( 2.1766, 2.98794 )
+text = "EXP : "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Panel"]
+margin_left = 248.0
+margin_top = 400.0
+margin_right = 300.0
+margin_bottom = 420.0
+rect_scale = Vector2( 2.72409, 2.82139 )
+custom_styles/normal = SubResource( 1 )
+text = "HOME"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+linkPath = "res://TSCN/Menu Home.tscn"
+
+[node name="Label Rank" type="Label" parent="Panel"]
+margin_left = 136.0
+margin_top = 128.0
+margin_right = 178.0
+margin_bottom = 142.0
+rect_scale = Vector2( 2.10652, 2.78699 )
+text = "Rank :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="levelUp" type="Label" parent="Panel"]
+visible = false
+margin_left = 408.0
+margin_top = 328.0
+margin_right = 496.0
+margin_bottom = 368.0
+rect_scale = Vector2( 1.89168, 2.61843 )
+text = "LEVEL UP!"

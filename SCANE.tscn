@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Script/KinematicBody2D.gd" type="Script" id=2]
+[ext_resource path="res://Music/Market on the Sea - MP3.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Character.gd" type="Script" id=4]
+[ext_resource path="res://ControlUI.gd" type="Script" id=5]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Perahu/Kapal Pukat Hela.png" type="Texture" id=7]
+[ext_resource path="res://ikan-ikan.gd" type="Script" id=9]
+[ext_resource path="res://Music/winCoin.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Camera2D.gd" type="Script" id=11]
+[ext_resource path="res://Script/BuatPemainLain.gd" type="Script" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+custom_solver_bias = 1.0
+extents = Vector2( 67, 33 )
+
+[node name="Root" type="Node2D"]
+
+[node name="Player 1" type="Node2D" parent="."]
+position = Vector2( 1400, 960 )
+z_index = 1
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Player 1"]
+script = ExtResource( 2 )
+maximalRandom = 100
+
+[node name="Character" type="Sprite" parent="Player 1/KinematicBody2D"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player 1/KinematicBody2D"]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="Player 1/KinematicBody2D"]
+current = true
+process_mode = 0
+limit_smoothed = true
+script = ExtResource( 11 )
+
+[node name="Control" parent="Player 1/KinematicBody2D/Camera2D" instance=ExtResource( 6 )]
+margin_left = -520.0
+margin_top = -296.0
+margin_right = -519.2
+margin_bottom = -295.2
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Player 1/KinematicBody2D/Camera2D"]
+margin_left = -64.0
+margin_top = -64.0
+margin_right = 60.0
+margin_bottom = -50.0
+custom_colors/font_color = Color( 0.521569, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "YOU"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -0.486
+pitch_scale = 0.92
+autoplay = true
+bus = "New Bus"
+
+[node name="ikan-ikan" type="Node2D" parent="."]
+script = ExtResource( 9 )
+nIkan = 200
+
+[node name="WinReward" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+volume_db = 24.0
+attenuation = 0.482969
+
+[node name="BuatPemainLain" type="Node2D" parent="."]
+script = ExtResource( 12 )
+nPemain = 50

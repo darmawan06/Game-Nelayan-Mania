@@ -1,0 +1,322 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://IMG_Laut/LautSulawesi.png" type="Texture" id=1]
+[ext_resource path="res://IMG_Laut/LautArafura.png" type="Texture" id=2]
+[ext_resource path="res://IMG_Laut/LautJawa.png" type="Texture" id=3]
+[ext_resource path="res://IMG_Laut/LautTimur.png" type="Texture" id=4]
+[ext_resource path="res://IMG_Laut/LautBanda.png" type="Texture" id=5]
+[ext_resource path="res://Script/pilihMap.gd" type="Script" id=6]
+[ext_resource path="res://IMG_Laut/Laut Only.png" type="Texture" id=7]
+[ext_resource path="res://Script/ToShop.gd" type="Script" id=8]
+[ext_resource path="res://Music/Komiku_-_12_-_Pirates_libertaires.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Script/AudioStreamPlayer.gd" type="Script" id=10]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.184314, 0.188235, 0.184314, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.027451, 0.564706, 0.921569, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 360.0
+margin_top = 56.0
+margin_right = 483.0
+margin_bottom = 70.0
+rect_scale = Vector2( 2.54681, 2.27097 )
+custom_colors/font_color = Color( 0.0392157, 0.901961, 0.619608, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "PILIH LOKASI LAUT"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grup" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 528, 464 )
+
+[node name="Jawa" type="Button" parent="Grup"]
+margin_left = 120.0
+margin_top = 160.0
+margin_right = 190.0
+margin_bottom = 210.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.47451, 0.364706, 0.364706, 1 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 3 )
+flat = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+indexMapGlobal = 1
+
+[node name="ColorRect" type="ColorRect" parent="Grup/Jawa"]
+margin_top = -40.0
+margin_right = 460.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 380, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Grup/Jawa"]
+margin_left = 100.0
+margin_top = -20.0
+margin_right = 173.0
+margin_bottom = -5.99997
+rect_scale = Vector2( 3.28578, 3.18838 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LAUT JAWA"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timur" type="Button" parent="Grup"]
+margin_left = 440.0
+margin_top = 160.0
+margin_right = 510.0
+margin_bottom = 210.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.47451, 0.364706, 0.364706, 1 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 4 )
+flat = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+indexMapGlobal = 3
+
+[node name="ColorRect" type="ColorRect" parent="Grup/Timur"]
+margin_top = -40.0
+margin_right = 480.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 380, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Grup/Timur"]
+margin_left = 120.0
+margin_top = -20.0
+margin_right = 199.0
+margin_bottom = -5.99997
+rect_scale = Vector2( 3.28578, 3.18838 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LAUT TIMUR"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Banda" type="Button" parent="Grup"]
+margin_left = 776.0
+margin_top = 160.0
+margin_right = 846.0
+margin_bottom = 210.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.47451, 0.364706, 0.364706, 1 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 5 )
+flat = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+indexMapGlobal = 5
+
+[node name="ColorRect" type="ColorRect" parent="Grup/Banda"]
+margin_top = -40.0
+margin_right = 440.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 380, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Grup/Banda"]
+margin_left = 100.0
+margin_top = -20.0
+margin_right = 173.0
+margin_bottom = -5.99997
+rect_scale = Vector2( 3.28578, 3.18838 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LAUT BANDA"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Arafura" type="Button" parent="Grup"]
+margin_left = 120.0
+margin_top = 368.0
+margin_right = 604.0
+margin_bottom = 720.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.47451, 0.364706, 0.364706, 1 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 2 )
+flat = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+indexMapGlobal = 4
+
+[node name="ColorRect" type="ColorRect" parent="Grup/Arafura"]
+margin_top = -40.0
+margin_right = 480.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 380, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Grup/Arafura"]
+margin_left = 100.0
+margin_top = -20.0
+margin_right = 173.0
+margin_bottom = -5.99997
+rect_scale = Vector2( 3.28578, 3.18838 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LAUT ARAFURA"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sulawesi" type="Button" parent="Grup"]
+margin_left = 440.0
+margin_top = 368.0
+margin_right = 510.0
+margin_bottom = 418.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.47451, 0.364706, 0.364706, 1 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 1 )
+flat = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+indexMapGlobal = 2
+
+[node name="ColorRect" type="ColorRect" parent="Grup/Sulawesi"]
+margin_top = -40.0
+margin_right = 500.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 380, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Grup/Sulawesi"]
+margin_left = 100.0
+margin_top = -20.0
+margin_right = 173.0
+margin_bottom = -5.99997
+rect_scale = Vector2( 3.28578, 3.18838 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LAUT SULAWESI"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SimpleMap" type="Button" parent="Grup"]
+margin_left = 768.0
+margin_top = 368.0
+margin_right = 1275.0
+margin_bottom = 658.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0.47451, 0.364706, 0.364706, 1 )
+toggle_mode = true
+shortcut_in_tooltip = false
+icon = ExtResource( 7 )
+flat = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Grup/SimpleMap"]
+margin_top = -40.0
+margin_right = 500.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 380, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Grup/SimpleMap"]
+margin_left = 120.0
+margin_top = -19.9999
+margin_right = 193.0
+margin_bottom = -5.99994
+rect_scale = Vector2( 3.28578, 3.18838 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Map party"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackHome" type="Button" parent="."]
+margin_left = 464.0
+margin_top = 536.0
+margin_right = 592.0
+margin_bottom = 576.0
+custom_colors/font_color_disabled = Color( 0.380392, 0.301961, 0.301961, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Back"
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+linkPath = "res://TSCN/Menu Home.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = 2.622
+autoplay = true
+mix_target = 1
+bus = "New Bus"
+script = ExtResource( 10 )

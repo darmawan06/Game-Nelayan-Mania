@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/winCoin.mp3-79dad298fc85dfd5b70767ce1cecdf1f.mp3str"
+
+[deps]
+
+source_file="res://Music/winCoin.mp3"
+dest_files=[ "res://.import/winCoin.mp3-79dad298fc85dfd5b70767ce1cecdf1f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

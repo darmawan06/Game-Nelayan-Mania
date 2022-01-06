@@ -1,0 +1,1108 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Perahu/Kapal Jaring Insang.png" type="Texture" id=1]
+[ext_resource path="res://Perahu/Kapal Pukat Hela.png" type="Texture" id=2]
+[ext_resource path="res://Perahu/Kapal Jaring Angkat.png" type="Texture" id=3]
+[ext_resource path="res://Perahu/Perahu Kano.png" type="Texture" id=4]
+[ext_resource path="res://Perahu/Perahu Jukung.png" type="Texture" id=5]
+[ext_resource path="res://Perahu/Kapal Rawai.png" type="Texture" id=6]
+[ext_resource path="res://Perahu/Perahu Dredger.png" type="Texture" id=7]
+[ext_resource path="res://Perahu/Kapal Pancing Joran.png" type="Texture" id=8]
+[ext_resource path="res://coin.png" type="Texture" id=9]
+[ext_resource path="res://Script/ToShop.gd" type="Script" id=10]
+[ext_resource path="res://Umpan/minnow.png" type="Texture" id=11]
+[ext_resource path="res://Umpan/oem.png" type="Texture" id=12]
+[ext_resource path="res://Umpan/MermaidKnight.png" type="Texture" id=13]
+[ext_resource path="res://Umpan/weagen2.png" type="Texture" id=14]
+[ext_resource path="res://Script/TokoPerahu.gd" type="Script" id=15]
+[ext_resource path="res://Script/TokoUmpan.gd" type="Script" id=16]
+[ext_resource path="res://Script/Menu Shop.gd" type="Script" id=17]
+[ext_resource path="res://TSCN/BtnBuy.gd" type="Script" id=18]
+[ext_resource path="res://Music/Komiku_-_12_-_Pirates_libertaires.mp3" type="AudioStream" id=19]
+[ext_resource path="res://Script/AudioStreamPlayer.gd" type="Script" id=20]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.243137, 0.223529, 0.188235, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_top = 1.0
+margin_right = 264.0
+margin_bottom = 601.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 24.0
+margin_top = 15.0
+margin_right = 78.0
+margin_bottom = 39.0
+rect_scale = Vector2( 4.01065, 3.28606 )
+custom_colors/font_color = Color( 0.956863, 0.988235, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.356863, 0.396078, 0.0901961, 1 )
+text = "Shop"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 264.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.27451, 0.247059, 0.211765, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GrupPerahu" type="Control" parent="ColorRect2"]
+visible = false
+margin_left = -264.0
+margin_right = -264.0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="KapalJaringAngkat" type="Button" parent="ColorRect2/GrupPerahu"]
+margin_left = 344.0
+margin_top = 352.0
+margin_right = 856.0
+margin_bottom = 727.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 3 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupPerahu/KapalJaringAngkat"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupPerahu/KapalJaringAngkat/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupPerahu/KapalJaringAngkat"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupPerahu/KapalJaringAngkat"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupPerahu/KapalJaringAngkat/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupPerahu/KapalJaringAngkat/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+
+[node name="KapalJaringInsang" type="Button" parent="ColorRect2/GrupPerahu"]
+margin_left = 568.0
+margin_top = 192.0
+margin_right = 1080.0
+margin_bottom = 567.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 1 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupPerahu/KapalJaringInsang"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupPerahu/KapalJaringInsang/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupPerahu/KapalJaringInsang"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupPerahu/KapalJaringInsang"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupPerahu/KapalJaringInsang/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupPerahu/KapalJaringInsang/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+id = 1
+
+[node name="KapalPancingJoran" type="Button" parent="ColorRect2/GrupPerahu"]
+margin_left = 568.0
+margin_top = 352.0
+margin_right = 1080.0
+margin_bottom = 727.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 8 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupPerahu/KapalPancingJoran"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupPerahu/KapalPancingJoran/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupPerahu/KapalPancingJoran"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupPerahu/KapalPancingJoran"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupPerahu/KapalPancingJoran/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupPerahu/KapalPancingJoran/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 2
+
+[node name="PerahuPukaHela" type="Button" parent="ColorRect2/GrupPerahu"]
+margin_left = 344.0
+margin_top = 192.0
+margin_right = 856.0
+margin_bottom = 567.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 2 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuPukaHela"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupPerahu/PerahuPukaHela/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupPerahu/PerahuPukaHela"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuPukaHela"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+rect_pivot_offset = Vector2( 2640, -240 )
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupPerahu/PerahuPukaHela/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupPerahu/PerahuPukaHela/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 3
+
+[node name="PerahuRawal" type="Button" parent="ColorRect2/GrupPerahu"]
+margin_left = 568.0
+margin_top = 24.0
+margin_right = 1080.0
+margin_bottom = 399.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 6 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuRawal"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupPerahu/PerahuRawal/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupPerahu/PerahuRawal"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuRawal"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+rect_pivot_offset = Vector2( -453.333, -133.334 )
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupPerahu/PerahuRawal/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupPerahu/PerahuRawal/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 4
+
+[node name="PerahuDredger" type="Button" parent="ColorRect2/GrupPerahu"]
+margin_left = 792.0
+margin_top = 192.0
+margin_right = 1304.0
+margin_bottom = 567.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 7 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuDredger"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupPerahu/PerahuDredger/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupPerahu/PerahuDredger"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuDredger"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupPerahu/PerahuDredger/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupPerahu/PerahuDredger/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 5
+
+[node name="PerahuJukung" type="Button" parent="ColorRect2/GrupPerahu"]
+margin_left = 792.0
+margin_top = 24.0
+margin_right = 1504.0
+margin_bottom = 306.0
+rect_scale = Vector2( 0.230253, 0.324231 )
+icon = ExtResource( 5 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuJukung"]
+margin_left = 312.699
+margin_top = 345.433
+margin_right = 605.699
+margin_bottom = 451.433
+rect_scale = Vector2( 1.30608, 1 )
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupPerahu/PerahuJukung/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupPerahu/PerahuJukung"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuJukung"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+rect_scale = Vector2( 1.21998, 0.948133 )
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupPerahu/PerahuJukung/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupPerahu/PerahuJukung/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 6
+
+[node name="PerahuKano" type="Button" parent="ColorRect2/GrupPerahu"]
+margin_left = 344.0
+margin_top = 24.0
+margin_right = 856.0
+margin_bottom = 399.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 4 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuKano"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupPerahu/PerahuKano/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupPerahu/PerahuKano"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupPerahu/PerahuKano"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupPerahu/PerahuKano/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupPerahu/PerahuKano/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 7
+
+[node name="btnHome" type="Button" parent="ColorRect2"]
+modulate = Color( 1, 0.960784, 0.960784, 1 )
+margin_left = 288.0
+margin_top = 520.0
+margin_right = 464.0
+margin_bottom = 576.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+text = "Menu"
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+linkPath = "res://TSCN/Menu Home.tscn"
+
+[node name="GrupUmpan" type="Control" parent="ColorRect2"]
+margin_left = -264.0
+margin_right = -264.0
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MermaidKnight" type="Button" parent="ColorRect2/GrupUmpan"]
+margin_left = 568.0
+margin_top = 24.0
+margin_right = 1080.0
+margin_bottom = 399.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 13 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupUmpan/MermaidKnight"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupUmpan/MermaidKnight/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupUmpan/MermaidKnight"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupUmpan/MermaidKnight"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupUmpan/MermaidKnight/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupUmpan/MermaidKnight/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+forBoat = false
+
+[node name="Minnow" type="Button" parent="ColorRect2/GrupUmpan"]
+margin_left = 336.0
+margin_top = 200.0
+margin_right = 848.0
+margin_bottom = 575.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 11 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupUmpan/Minnow"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupUmpan/Minnow/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupUmpan/Minnow"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupUmpan/Minnow"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupUmpan/Minnow/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupUmpan/Minnow/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 1
+forBoat = false
+
+[node name="Oeam" type="Button" parent="ColorRect2/GrupUmpan"]
+margin_left = 792.0
+margin_top = 24.0
+margin_right = 1504.0
+margin_bottom = 306.0
+rect_scale = Vector2( 0.243654, 0.292161 )
+icon = ExtResource( 12 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupUmpan/Oeam"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupUmpan/Oeam/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupUmpan/Oeam"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupUmpan/Oeam"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupUmpan/Oeam/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupUmpan/Oeam/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 2
+forBoat = false
+
+[node name="Weagen2" type="Button" parent="ColorRect2/GrupUmpan"]
+margin_left = 344.0
+margin_top = 24.0
+margin_right = 856.0
+margin_bottom = 399.0
+rect_scale = Vector2( 0.3, 0.3 )
+icon = ExtResource( 14 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/GrupUmpan/Weagen2"]
+margin_left = 240.0
+margin_top = 347.0
+margin_right = 533.0
+margin_bottom = 453.0
+color = Color( 0.14902, 0.0784314, 0.00392157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ColorRect2/GrupUmpan/Weagen2/ColorRect"]
+margin_right = 50.0
+margin_bottom = 19.0
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Detail"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="ColorRect2/GrupUmpan/Weagen2"]
+margin_left = 307.837
+margin_top = 6.10352e-05
+margin_right = 347.837
+margin_bottom = 14.0001
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 0.945098, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0.266667, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0.584314, 0.752941, 0.0509804, 1 )
+text = "5000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2/GrupUmpan/Weagen2"]
+margin_left = -53.3333
+margin_top = 346.667
+margin_right = 213.667
+margin_bottom = 453.667
+color = Color( 0.0862745, 0.47451, 0.301961, 1 )
+
+[node name="Label3" type="Label" parent="ColorRect2/GrupUmpan/Weagen2/ColorRect2"]
+margin_left = 0.00012207
+margin_top = -0.333435
+margin_right = 45.0001
+margin_bottom = 18.6666
+rect_scale = Vector2( 5.91304, 5.73861 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Beli"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ColorRect2/GrupUmpan/Weagen2/ColorRect2"]
+margin_right = 267.0
+margin_bottom = 107.0
+flat = true
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+id = 3
+forBoat = false
+
+[node name="Money" type="Sprite" parent="."]
+position = Vector2( 56, 552 )
+scale = Vector2( 0.345303, 0.324106 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Money"]
+margin_left = 93.0
+margin_top = -25.0
+margin_right = 139.0
+rect_scale = Vector2( 6.83537, 6.5575 )
+custom_colors/font_color = Color( 0.984314, 0.984314, 0.984314, 1 )
+custom_colors/font_color_shadow = Color( 0.701961, 0.490196, 0.490196, 1 )
+text = "3000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnPerahu" type="Button" parent="."]
+margin_top = 136.0
+margin_right = 81.0
+margin_bottom = 168.0
+rect_scale = Vector2( 3.27697, 2.82781 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "PERAHU"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BtnPerahu2" type="Button" parent="."]
+margin_top = 264.0
+margin_right = 81.0
+margin_bottom = 296.0
+rect_scale = Vector2( 3.27697, 2.82781 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+text = "UMPAN"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = 2.622
+autoplay = true
+mix_target = 1
+bus = "New Bus"
+script = ExtResource( 20 )

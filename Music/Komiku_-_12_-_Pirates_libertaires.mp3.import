@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Komiku_-_12_-_Pirates_libertaires.mp3-c57eef20be473b42855d3ec131bd25a4.mp3str"
+
+[deps]
+
+source_file="res://Music/Komiku_-_12_-_Pirates_libertaires.mp3"
+dest_files=[ "res://.import/Komiku_-_12_-_Pirates_libertaires.mp3-c57eef20be473b42855d3ec131bd25a4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

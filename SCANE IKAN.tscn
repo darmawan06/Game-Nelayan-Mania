@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Pergerakan Ikan.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 88.5, 81.8333 )
+
+[sub_resource type="Theme" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Move" type="KinematicBody2D" parent="."]
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Move"]
+z_as_relative = false
+shape = SubResource( 3 )
+
+[node name="Control" type="Control" parent="Move"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Move/Control"]
+margin_left = -133.333
+margin_top = -240.0
+margin_right = 133.667
+margin_bottom = -187.0
+color = Color( 0.113725, 0.729412, 0.454902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Move/Control"]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 1, 0.94902, 0.94902, 1 )
+margin_left = -133.0
+margin_top = -240.0
+margin_right = -23.0
+margin_bottom = -216.0
+rect_scale = Vector2( 2.4, 2.24 )
+theme = SubResource( 4 )
+text = "jj"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
